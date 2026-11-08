@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Алиф — учим арабский алфавит</title>
+<style>
+:root{--bg:#f6f5ef;--ink:#173b37;--muted:#657874;--green:#174c45;--gold:#dbb971;--line:#dce5df;--white:#fff;--shadow:0 12px 34px #163d3010}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink)}button{font:inherit;cursor:pointer}header{background:var(--green);color:#fff;padding:28px max(5vw,20px) 75px;position:relative;overflow:hidden}header:after{content:'اللغة العربية';position:absolute;right:-25px;bottom:-70px;opacity:.08;font:180px Georgia,serif;white-space:nowrap;pointer-events:none}.nav{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}.brand{font-weight:800;font-size:25px;letter-spacing:-1px}.brand span{color:var(--gold)}.navlinks{display:flex;gap:10px}.navlinks button{color:#fff;border:1px solid #ffffff55;background:transparent;border-radius:50px;padding:10px 18px}.navlinks button.active{background:#fff;color:var(--green)}.hero{position:relative;z-index:1;max-width:1120px;margin:55px auto 0}.eyebrow{color:#e5ca8c;font-size:13px;letter-spacing:2px;font-weight:750}.hero h1{font-size:clamp(35px,5vw,64px);max-width:770px;line-height:1.08;letter-spacing:-2px;margin:14px 0}.hero p{color:#d2e2dc;max-width:650px;line-height:1.7;font-size:17px}.stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px}.stat{border:1px solid #ffffff3b;border-radius:15px;padding:12px 18px;min-width:125px}.stat strong{font-size:27px;display:block}.stat small{color:#c7ddd3}main{max-width:1120px;margin:-37px auto 70px;padding:0 20px;position:relative;z-index:2}.panel{background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:28px;margin-bottom:25px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:22px}.sectionhead h2{font-size:27px;letter-spacing:-.7px;margin:0}.sub{color:var(--muted);line-height:1.6;margin:8px 0 0}.search{border:1px solid var(--line);padding:13px 16px;border-radius:12px;min-width:250px;max-width:100%;outline-color:var(--gold)}.alphabet{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}.letter{border:1px solid var(--line);background:#fbfcfa;min-height:145px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:.2s}.letter:hover,.letter:focus-visible{transform:translateY(-4px);border-color:#a6bfb4;box-shadow:0 12px 20px #174c4517}.glyph{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;font-size:62px;line-height:1.2;color:var(--green)}.lname{font-weight:750;font-size:14px}.trans{font-size:12px;color:#728480}.hint{font-size:13px;color:#6d817a;margin-top:18px}.hidden{display:none!important}.empty{padding:35px;text-align:center;color:var(--muted)}.pill{border-radius:99px;background:#edf5f0;color:#1c6754;font-size:13px;font-weight:700;padding:8px 13px}.primary{border:0;background:var(--green);color:#fff;padding:13px 22px;border-radius:12px;font-weight:750}.primary:hover{background:#0d3732}.secondary{background:#fff;border:1px solid #b9cfc2;color:var(--green);padding:12px 17px;border-radius:12px;font-weight:700}.quiz-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}.progress{height:9px;border-radius:20px;background:#ebefea;overflow:hidden;margin:19px 0 28px}.progress>div{background:#c5a15f;height:100%;width:0;transition:width .3s}.question{font-size:20px;font-weight:750}.question-glyph{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;font-size:110px;text-align:center;margin:12px 0 26px;color:var(--green);line-height:1.4}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{background:#fafbf9;border:1px solid var(--line);border-radius:13px;padding:17px;text-align:left;color:var(--ink);font-weight:650}.option:hover:not(:disabled){border-color:#609682;background:#f2faf5}.option.correct{background:#e3f5e8;border-color:#66a778}.option.wrong{background:#fff0ee;border-color:#db8b80}.option:disabled{cursor:default}.feedback{margin:18px 0;font-weight:700;min-height:24px}.quizactions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.modal-back{position:fixed;inset:0;background:#071e1acc;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:#fff;border-radius:22px;padding:28px;max-width:560px;width:100%;position:relative;max-height:95vh;overflow-y:auto}.close{position:absolute;right:17px;top:14px;background:#eef4ef;border:0;border-radius:50%;height:36px;width:36px;font-size:22px}.modal .big{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;font-size:115px;text-align:center;line-height:1.35;color:var(--green)}.modal h2{text-align:center;margin:0}.roman{text-align:center;color:var(--muted);margin:6px}.forms{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:22px 0}.form{background:#f4f8f5;border-radius:10px;text-align:center;padding:14px 3px}.form div{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;font-size:37px;min-height:60px;display:grid;place-items:center}.form small{font-size:11px;color:var(--muted)}.desc{line-height:1.7;color:#3e5852}.modalactions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}.foot{margin:20px auto;text-align:center;color:var(--muted);font-size:13px;padding:0 20px} .notice{background:#fff8e8;border:1px solid #eed7a5;color:#715c31;padding:12px 15px;border-radius:11px;font-size:13px;line-height:1.5;margin-top:14px}@media(max-width:760px){.alphabet{grid-template-columns:repeat(4,1fr)}.letter{min-height:122px}.glyph{font-size:52px}.panel{padding:20px}.nav{align-items:flex-start;gap:15px;flex-wrap:wrap}.hero{margin-top:40px}.hero h1{letter-spacing:-1px}.forms{grid-template-columns:repeat(2,1fr)}}@media(max-width:420px){.alphabet{grid-template-columns:repeat(3,1fr)}.options{grid-template-columns:1fr}.search{min-width:100%}.letter{min-height:112px}.glyph{font-size:47px}}
+</style></head>
+<body><header><nav class="nav"><div class="brand">أ <span>Алиф.</span></div><div class="navlinks"><button id="navABC" class="active">Алфавит</button><button id="navQuiz">Проверка знаний</button></div></nav><div class="hero"><div class="eyebrow">ПЕРВЫЕ ШАГИ В АРАБСКОМ</div><h1>28 букв. Один шаг к новому языку.</h1><p>Изучай арабский алфавит в удобном формате: нажимай на буквы, знакомься с написанием и звучанием, а затем проверь себя.</p><div class="stats"><div class="stat"><strong>28</strong><small>букв</small></div><div class="stat"><strong>4</strong><small>формы написания*</small></div><div class="stat"><strong>2</strong><small>режима тестирования</small></div></div></div></header>
+<main><section class="panel" id="abcSection"><div class="sectionhead"><div><h2>Интерактивный алфавит</h2><p class="sub">Выбери букву, чтобы увидеть её формы и подсказку по произношению.</p></div><input id="search" class="search" placeholder="Найти букву или название…" aria-label="Поиск букв"></div><div id="alphabet" class="alphabet"></div><div id="empty" class="empty hidden">Ничего не найдено. Попробуй другое название.</div><p class="hint">* У некоторых букв начальная и срединная формы совпадают с изолированной по соединению слева: не все арабские буквы соединяются с последующей. Формы здесь показаны в традиционных позициях.</p><div class="notice">Арабский пишется справа налево. Для настоящего звучания нажми «Прослушать» в карточке: воспроизведение зависит от наличия арабского голоса в браузере.</div></section>
+<section class="panel hidden" id="quizSection"><div class="sectionhead"><div><h2>Проверь себя</h2><p class="sub" id="quizSubtitle">Выбери режим и проверь знание всех 28 букв.</p></div><span id="scoreBadge" class="pill">0 из 28</span></div><div id="quizIntro"><p>Каждый тест проверяет все 28 букв в случайном порядке, без повторений. Выбери, что хочешь потренировать:</p><div class="quizactions"><button class="primary" id="startQuiz">Буква → название</button><button class="secondary" id="startReverse">Название → буква</button></div></div><div id="quizGame" class="hidden"><div class="quiz-top"><strong id="qIndex">Вопрос 1 из 28</strong><span class="pill" id="qScore">Верно: 0</span></div><div class="progress"><div id="progressFill"></div></div><div class="question" id="qPrompt">Как называется эта буква?</div><div class="question-glyph" id="qGlyph" lang="ar" dir="rtl"></div><div class="options" id="options"></div><div class="feedback" id="feedback" role="status"></div><div class="quizactions"><button id="next" class="primary hidden">Следующий вопрос →</button></div></div><div id="quizResult" class="hidden"><div class="question-glyph" style="font-size:80px">ممتاز!</div><h3 id="resultTitle" style="font-size:28px;text-align:center"></h3><p id="resultBody" class="sub" style="text-align:center"></p><div style="text-align:center;margin-top:25px"><button class="primary" id="restart">Пройти снова ↻</button><button class="secondary" id="changeMode">Выбрать другой режим</button></div></div></section></main>
+<div id="modalBack" class="modal-back hidden" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><button class="close" id="close" aria-label="Закрыть">×</button><div id="mGlyph" class="big" lang="ar"></div><h2 id="mTitle"></h2><p class="roman" id="mRoman"></p><div id="forms" class="forms"></div><p class="desc" id="mDesc"></p><div class="modalactions"><button class="primary" id="speak">🔊 Прослушать</button><button class="secondary" id="close2">Вернуться к алфавиту</button></div><p id="voiceStatus" class="hint" role="status"></p></div></div>
+<footer class="foot">Алиф — учебный проект для знакомства с арабским алфавитом. Транслитерация и русские подсказки приблизительны.</footer>
+<script>
+const letters=[
+['ا','Алиф','ʾ / ā','Гортанная смычка или долгий звук «а» (в зависимости от огласовки и контекста).','ا','ﺍ','ـا','ـا'],
+['ب','Ба','b','Как русский «б».','ب','بـ','ـبـ','ـب'],
+['ت','Та','t','Как русский «т».','ت','تـ','ـتـ','ـت'],
+['ث','Са (ثа)','th / θ','Межзубный звук, как th в английском think.','ث','ثـ','ـثـ','ـث'],
+['ج','Джим','j / dʒ','Как английский j в jam (в литературном арабском).','ج','جـ','ـجـ','ـج'],
+['ح','Ха (ح)','ḥ','Глубокий глухой глоточный звук, без аналога в русском.','ح','حـ','ـحـ','ـح'],
+['خ','Ха (خ)','kh / x','Как русский «х», часто более задний.','خ','خـ','ـخـ','ـخ'],
+['د','Даль','d','Как русский «д». Не соединяется с буквой слева от себя в обычном направлении письма.','د','د','ـد','ـد'],
+['ذ','Заль','dh / ð','Межзубный звонкий звук, как th в английском this.','ذ','ذ','ـذ','ـذ'],
+['ر','Ра','r','Раскатистое «р». Не соединяется со следующей буквой.','ر','ر','ـر','ـر'],
+['ز','Зай','z','Как русский «з». Не соединяется со следующей буквой.','ز','ز','ـز','ـز'],
+['س','Син','s','Как русский «с».','س','سـ','ـسـ','ـس'],
+['ش','Шин','sh / ʃ','Как русский «ш», но артикуляция может отличаться.','ش','شـ','ـشـ','ـش'],
+['ص','Сад','ṣ','Эмфатический, более твёрдый «с».','ص','صـ','ـصـ','ـص'],
+['ض','Дад','ḍ','Эмфатический, более твёрдый «д».','ض','ضـ','ـضـ','ـض'],
+['ط','Та (ط)','ṭ','Эмфатический, более твёрдый «т».','ط','طـ','ـطـ','ـط'],
+['ظ','За (ظ)','ẓ','Эмфатический межзубный звонкий звук; произношение зависит от варианта арабского.','ظ','ظـ','ـظـ','ـظ'],
+['ع','Айн','ʿ','Звонкий глоточный согласный, без точного русского аналога.','ع','عـ','ـعـ','ـع'],
+['غ','Гайн','gh / ɣ','Звонкий заднеязычный фрикативный звук; напоминает французское r в некоторых произношениях.','غ','غـ','ـغـ','ـغ'],
+['ف','Фа','f','Как русский «ф».','ف','فـ','ـفـ','ـف'],
+['ق','Каф (ق)','q','Глухой увулярный смычный согласный, произносится глубже русского «к».','ق','قـ','ـقـ','ـق'],
+['ك','Кяф','k','Как русский «к».','ك','كـ','ـكـ','ـك'],
+['ل','Лям','l','Похож на русский «л».','ل','لـ','ـلـ','ـل'],
+['م','Мим','m','Как русский «м».','م','مـ','ـمـ','ـم'],
+['ن','Нун','n','Как русский «н».','ن','نـ','ـنـ','ـن'],
+['ه','Ха (ه)','h','Лёгкий выдох, как английский h в house.','ه','هـ','ـهـ','ـه'],
+['و','Вав','w / ū','Согласный «у» нескладовой / w либо долгий «у» по контексту. Не соединяется со следующей буквой.','و','و','ـو','ـو'],
+['ي','Йа','y / ī','Согласный «й» либо долгий «и» по контексту.','ي','يـ','ـيـ','ـي']
+];
+const $=id=>document.getElementById(id);let current=null,quiz=[],index=0,score=0,locked=false;
+function makeAlphabet(query=''){const root=$('alphabet');root.innerHTML='';const term=query.trim().toLocaleLowerCase('ru');let num=0;letters.forEach((l,i)=>{if(term&&!`${l[0]} ${l[1]} ${l[2]}`.toLocaleLowerCase('ru').includes(term))return;num++;let b=document.createElement('button');b.className='letter';b.setAttribute('aria-label',`Буква ${l[1]}`);b.innerHTML=`<span class="glyph" lang="ar">${l[0]}</span><span class="lname">${l[1]}</span><span class="trans">${l[2]}</span>`;b.onclick=()=>openLetter(i);root.appendChild(b)});$('empty').classList.toggle('hidden',num>0)}
+function openLetter(i){current=i;const l=letters[i];$('mGlyph').textContent=l[0];$('mTitle').textContent=l[1];$('mRoman').textContent=`Транслитерация: ${l[2]}`;$('mDesc').textContent=l[3];$('voiceStatus').textContent='';$('forms').innerHTML='';['Отдельно','В начале','В середине','В конце'].forEach((name,j)=>{const node=document.createElement('div');node.className='form';node.innerHTML=`<div lang="ar" dir="rtl">${l[4+j]}</div><small>${name}</small>`;$('forms').appendChild(node)});$('modalBack').classList.remove('hidden');$('close').focus()}
+function closeModal(){$('modalBack').classList.add('hidden');if('speechSynthesis'in window)speechSynthesis.cancel()}
+$('close').onclick=closeModal;$('close2').onclick=closeModal;$('modalBack').addEventListener('click',e=>{if(e.target===$('modalBack'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});$('search').addEventListener('input',e=>makeAlphabet(e.target.value));
+$('speak').onclick=()=>{if(!('speechSynthesis'in window)){$('voiceStatus').textContent='Ваш браузер не поддерживает синтез речи.';return}speechSynthesis.cancel();const available=speechSynthesis.getVoices();const voice=available.find(x=>x.lang.toLowerCase().startsWith('ar'));if(!voice){$('voiceStatus').textContent='Арабский голос в браузере не найден. Можно установить арабский голос в настройках устройства.';return}const u=new SpeechSynthesisUtterance(letters[current][0]+'َ');u.lang='ar-SA';u.voice=voice;u.rate=.75;speechSynthesis.speak(u);$('voiceStatus').textContent='Озвучивание через системный арабский голос. Для отдельных букв произношение может быть приблизительным.'};
+function navigate(which){$('abcSection').classList.toggle('hidden',which!=='abc');$('quizSection').classList.toggle('hidden',which!=='quiz');$('navABC').classList.toggle('active',which==='abc');$('navQuiz').classList.toggle('active',which==='quiz');window.scrollTo({top:270,behavior:'smooth'})}
+$('navABC').onclick=()=>navigate('abc');$('navQuiz').onclick=()=>navigate('quiz');
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+let quizMode='letterToName';
+function start(mode='letterToName'){
+  quizMode=mode;
+  quiz=shuffle([...letters.keys()]);
+  index=0;score=0;
+  $('quizSubtitle').textContent=mode==='letterToName'?'Режим 1: узнай название каждой из 28 букв.':'Режим 2: найди арабскую букву по её названию.';
+  $('scoreBadge').textContent=`0 из ${quiz.length}`;
+  $('quizIntro').classList.add('hidden');
+  $('quizResult').classList.add('hidden');
+  $('quizGame').classList.remove('hidden');
+  showQ();
+}
+function showQ(){
+  locked=false;
+  const count=quiz.length;
+  $('next').classList.add('hidden');
+  $('feedback').textContent='';
+  const correct=quiz[index];
+  const reverse=quizMode==='nameToLetter';
+  $('qPrompt').textContent=reverse?'Найди букву с этим названием:':'Как называется эта буква?';
+  $('qGlyph').textContent=reverse?letters[correct][1]:letters[correct][0];
+  $('qGlyph').setAttribute('lang',reverse?'ru':'ar');
+  $('qGlyph').setAttribute('dir',reverse?'ltr':'rtl');
+  $('qGlyph').style.fontFamily=reverse?'inherit':'';
+  $('qGlyph').style.fontSize=reverse?'clamp(36px,7vw,64px)':'';
+  $('qIndex').textContent=`Вопрос ${index+1} из ${count}`;
+  $('qScore').textContent=`Верно: ${score}`;
+  $('scoreBadge').textContent=`${score} из ${count}`;
+  $('progressFill').style.width=`${(index/count)*100}%`;
+  const wrong=shuffle([...letters.keys()].filter(x=>x!==correct)).slice(0,3);
+  const choices=shuffle([correct,...wrong]);
+  $('options').innerHTML='';
+  choices.forEach(id=>{
+    const b=document.createElement('button');
+    b.className='option';
+    b.dataset.letterId=String(id);
+    b.textContent=reverse?letters[id][0]:letters[id][1];
+    if(reverse){
+      b.lang='ar';b.dir='rtl';
+      b.style.fontFamily="'Noto Naskh Arabic','Traditional Arabic',serif";
+      b.style.fontSize='42px';b.style.textAlign='center';
+    }
+    b.onclick=()=>choose(id,b);
+    $('options').appendChild(b);
+  });
+}
+function choose(id,selected){
+  if(locked)return;
+  locked=true;
+  const answer=quiz[index];
+  if(id===answer)score++;
+  $('options').querySelectorAll('button').forEach(b=>{
+    b.disabled=true;
+    if(Number(b.dataset.letterId)===answer)b.classList.add('correct');
+  });
+  if(id!==answer)selected.classList.add('wrong');
+  const correctLabel=quizMode==='nameToLetter'?`${letters[answer][0]} (${letters[answer][1]})`:letters[answer][1];
+  $('feedback').textContent=id===answer?'Правильно! Отличная работа.':`Не совсем. Правильный ответ: ${correctLabel}.`;
+  $('qScore').textContent=`Верно: ${score}`;
+  $('scoreBadge').textContent=`${score} из ${quiz.length}`;
+  $('next').textContent=index===quiz.length-1?'Узнать результат →':'Следующий вопрос →';
+  $('next').classList.remove('hidden');
+}
+$('next').onclick=()=>{
+  index++;
+  if(index<quiz.length){showQ();return}
+  $('quizGame').classList.add('hidden');
+  $('quizResult').classList.remove('hidden');
+  $('progressFill').style.width='100%';
+  $('resultTitle').textContent=`Твой результат: ${score} из ${quiz.length}`;
+  const pct=score/quiz.length;
+  $('resultBody').textContent=pct===1?'Безупречно! Ты знаешь все 28 букв.':pct>=.7?'Очень хорошо! Ещё немного практики — и результат станет отличным.':pct>=.4?'Хорошее начало! Повтори сложные буквы на доске и попробуй снова.':'Начало положено! Вернись к алфавиту, изучи карточки и повтори тест.';
+};
+$('startQuiz').onclick=()=>start('letterToName');
+$('startReverse').onclick=()=>start('nameToLetter');
+$('restart').onclick=()=>start(quizMode);
+$('changeMode').onclick=()=>{
+  $('quizGame').classList.add('hidden');
+  $('quizResult').classList.add('hidden');
+  $('quizIntro').classList.remove('hidden');
+  $('quizSubtitle').textContent='Выбери режим и проверь знание всех 28 букв.';
+  $('scoreBadge').textContent='0 из 28';
+};
+makeAlphabet();
+</script></body></html>
